@@ -340,6 +340,7 @@ func (f *Fs) uploadUnchecked(ctx context.Context, name, parentSlug string, info 
 		RootURL:              session.URL + "&batch_file_id=1&is_porn=false",
 		MultipartContentName: "file",
 		MultipartFileName:    encodedName,
+		TransferEncoding:     []string{"identity"},
 		Parameters:           url.Values{},
 	}
 	var uploadResponse api.SendFilePayloadResponse
